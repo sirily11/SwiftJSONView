@@ -7,13 +7,14 @@ let package = Package(
     name: "SwiftJSONView",
     platforms: [
         .macOS(.v11),
-        .iOS(.v13)
+        .iOS(.v14),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SwiftJSONView",
-            targets: ["SwiftJSONView"]),
+            targets: ["SwiftJSONView"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "5.0.0")),
@@ -24,10 +25,12 @@ let package = Package(
         .target(
             name: "SwiftJSONView",
             dependencies: [
-                .product(name: "SwiftyJSON", package: "SwiftyJSON")
-            ]),
+                .product(name: "SwiftyJSON", package: "SwiftyJSON"),
+            ]
+        ),
         .testTarget(
             name: "SwiftJSONViewTests",
-            dependencies: ["SwiftJSONView"]),
+            dependencies: ["SwiftJSONView"]
+        ),
     ]
 )

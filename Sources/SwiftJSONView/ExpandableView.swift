@@ -37,8 +37,8 @@ struct ExpandableView<Content: View>: View {
     }
     
     func toggle(){
+        open.toggle()
         withAnimation {
-            open.toggle()
             rotate.toggle()
         }
     }
