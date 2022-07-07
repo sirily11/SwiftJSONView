@@ -1,3 +1,4 @@
 # SwiftJSONView
 
-A description of this package.
+An easy way to display your `Json` object.
+
